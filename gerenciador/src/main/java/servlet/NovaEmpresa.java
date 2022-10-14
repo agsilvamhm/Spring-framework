@@ -1,12 +1,16 @@
 package servlet;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import model.Banco;
+import model.Empresa;
+
 import java.io.IOException;
-import java.io.PrintWriter;
+
 
 /**
  * Servlet implementation class NovaEmpresa
@@ -18,12 +22,13 @@ public class NovaEmpresa extends HttpServlet {
        
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String nomeEmpresa = request.getParameter("nome");
+		Empresa empresa = new Empresa();
+		empresa.setNome(nomeEmpresa);
 		System.out.println("Cadastrando uma nova empresa");
-		PrintWriter out = response.getWriter();
-		out.println("<Html>");
-		out.println("<body>");
-		out.println("<h1>Empresa " + nomeEmpresa + " cadastrada com sucesso!</h1>" );
-		out.println("</body>");
-		out.println("</Html>");
+		Banco banco = new Banco();
+		banco.adiciona(empresa);
+		
+		RequestDispatcher rd =  request.getRequestDispatcher("/novaEmpresaCriada.jsp");
+		rd.forward(request, response);
 	}
 }

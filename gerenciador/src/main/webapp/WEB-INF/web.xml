@@ -29,4 +29,24 @@
     <servlet-name>NovaEmpresa</servlet-name>
     <url-pattern>/NovaEmpresa</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListarEmpresasServlet</display-name>
+    <servlet-name>ListarEmpresasServlet</servlet-name>
+    <servlet-class>servlet.ListarEmpresasServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListarEmpresasServlet</servlet-name>
+    <url-pattern>/listarEmpresasServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListarEmpresasPost</display-name>
+    <servlet-name>ListarEmpresasPost</servlet-name>
+    <servlet-class>servlet.ListarEmpresasPost</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListarEmpresasPost</servlet-name>
+    <url-pattern>/listarEmpresasPost</url-pattern>
+  </servlet-mapping>
 </web-app>
