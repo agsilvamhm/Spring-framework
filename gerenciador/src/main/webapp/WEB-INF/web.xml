@@ -10,7 +10,7 @@
     <servlet-name>MeuPrimeiroServlet</servlet-name>
     <url-pattern>/MeuPrimeiroServlet</url-pattern>
   </servlet-mapping>
-  <display-name>Teste</display-name>
+  <display-name>gerenciador</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
