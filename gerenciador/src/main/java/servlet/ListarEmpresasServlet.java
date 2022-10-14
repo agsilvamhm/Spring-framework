@@ -1,5 +1,6 @@
 package servlet;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -26,15 +27,10 @@ public class ListarEmpresasServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		Banco banco = new Banco();
-		List<Empresa> lista = banco.getEmpresas();
-		PrintWriter out = response.getWriter();
-		out.println("<html><body>");
-		out.println("<ul>");
-		for (Empresa empresa :lista){
-			out.println("<li>" + empresa.getNome() +"</li>");
-		}
+		List<Empresa> lista = banco.getEmpresas();	
+		request.setAttribute("empresas", lista);
 		
-		out.println("</ul>");
-		out.println("</body></html>");
+		RequestDispatcher rd = request.getRequestDispatcher("/listaEmpresas.jsp");
+		rd.forward(request, response);
 	}
 }

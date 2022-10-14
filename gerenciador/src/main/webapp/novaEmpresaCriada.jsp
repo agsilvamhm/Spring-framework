@@ -10,7 +10,7 @@
 <%
 // Scriptlet
 
-String nomeEmpresa = "Alura";
+String nomeEmpresa = (String)request.getAttribute("empresa");
 %>
 
 <h2>Empresa <% out.println(nomeEmpresa); %> cadastrada com sucesso!</h2>

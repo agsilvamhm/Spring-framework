@@ -29,6 +29,7 @@ public class NovaEmpresa extends HttpServlet {
 		banco.adiciona(empresa);
 		
 		RequestDispatcher rd =  request.getRequestDispatcher("/novaEmpresaCriada.jsp");
+		request.setAttribute("empresa", empresa.getNome());
 		rd.forward(request, response);
 	}
 }
