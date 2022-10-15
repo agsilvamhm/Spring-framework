@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
     
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f" %>
    
 <!DOCTYPE html>
 <html>
@@ -13,8 +14,10 @@
 <h2>Lista de Empresas:</h2>
 	
 <ul>
-	<c:forEach items="${empresas}" var="i">
-		<li>${empresa.nome}</li>	
+  
+   	
+	<c:forEach items="${empresas}" var="empresa">
+		<li>${empresa.nome } - <f:formatDate value="${empresa.dataAbertura }" pattern="dd/MM/yyyy"/></li>	
 	</c:forEach>
 </ul>
 
