@@ -7,14 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-// Scriptlet
 
-String nomeEmpresa = (String)request.getAttribute("empresa");
-%>
+<h2>Empresa ${ empresa } cadastrada com sucesso!</h2>
 
-<h2>Empresa <% out.println(nomeEmpresa); %> cadastrada com sucesso!</h2>
-
-<h2>Empresa <%=nomeEmpresa %> cadastrada com sucesso!</h2>
 </body>
 </html>

@@ -21,6 +21,4 @@ public class MeuPrimeiroServlet extends HttpServlet {
 		out.println("</body>");
 		out.println("</html>");	
 	}
-
-
 }

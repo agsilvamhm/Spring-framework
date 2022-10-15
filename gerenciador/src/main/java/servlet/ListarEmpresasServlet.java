@@ -10,15 +10,9 @@ import model.Banco;
 import model.Empresa;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Iterator;
 import java.util.List;
 
-import org.apache.jasper.tagplugins.jstl.core.ForEach;
 
-/**
- * Servlet implementation class ListarEmpresasServlet
- */
 @WebServlet("/listaEmpresas")
 public class ListarEmpresasServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
