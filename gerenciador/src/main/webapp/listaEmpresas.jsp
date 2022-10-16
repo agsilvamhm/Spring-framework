@@ -11,11 +11,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<c:if test="${not empty empresa}">
+		<h2>Empresa ${empresa} cadastrada com sucesso!</h2>		
+	</c:if>
+
 <h2>Lista de Empresas:</h2>
-	
-<ul>
-  
-   	
+<ul>  	
 	<c:forEach items="${empresas}" var="empresa">
 		<li>${empresa.nome } - <f:formatDate value="${empresa.dataAbertura }" pattern="dd/MM/yyyy"/></li>	
 	</c:forEach>
