@@ -44,6 +44,34 @@
     <servlet-name>ListarEmpresasPost</servlet-name>
     <url-pattern>/listarEmpresasPost</url-pattern>
   </servlet-mapping>
-  
-  
+  <servlet>
+    <description></description>
+    <display-name>RemoveEmpresa</display-name>
+    <servlet-name>RemoveEmpresa</servlet-name>
+    <servlet-class>servlet.RemoveEmpresa</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoveEmpresa</servlet-name>
+    <url-pattern>/RemoveEmpresa</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MostraEmpresaServelet</display-name>
+    <servlet-name>MostraEmpresaServelet</servlet-name>
+    <servlet-class>servlet.MostraEmpresaServelet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MostraEmpresaServelet</servlet-name>
+    <url-pattern>/mostraEmpresa</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MostrarEmpresaServlet</display-name>
+    <servlet-name>MostrarEmpresaServlet</servlet-name>
+    <servlet-class>servlet.MostrarEmpresaServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MostrarEmpresaServlet</servlet-name>
+    <url-pattern>/mostrarEmpresa</url-pattern>
+  </servlet-mapping>
 </web-app>
