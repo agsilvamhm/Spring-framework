@@ -38,8 +38,8 @@ public class NovaEmpresa extends HttpServlet {
 		Banco banco = new Banco();
 		banco.adiciona(empresa);
 		
-//		response.sendRedirect("listaEmpresas");
-//		request.setAttribute("empresa", empresa.getNome());
+		response.sendRedirect("listaEmpresas");
+		request.setAttribute("empresa", empresa.getNome());
 		
 //		RequestDispatcher rd =  request.getRequestDispatcher("/listaEmpresas");
 //		request.setAttribute("empresa", empresa.getNome());
