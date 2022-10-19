@@ -5,6 +5,9 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import modelo.Banco;
+import modelo.Empresa;
+
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -29,6 +32,15 @@ public class AlteraEmpresaServlet extends HttpServlet {
 			// TODO Auto-generated catch block
 			throw new ServletException(e);
 		}
+		
+		Banco banco = new Banco();
+		Empresa empresa = banco.getEmpresa(id);
+		empresa.setNome(nomeEmpresa);
+		empresa.setDataAbertura(dataAbertEmpresa);
+		
+		response.sendRedirect("listaEmpresas");
+		
+		
 	}
 
 }
