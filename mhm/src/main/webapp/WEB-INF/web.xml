@@ -19,4 +19,24 @@
     <servlet-name>NovaEmpresa</servlet-name>
     <url-pattern>/NovaEmpresa</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MostrarEmpresaServlet</display-name>
+    <servlet-name>MostrarEmpresaServlet</servlet-name>
+    <servlet-class>servlet.MostrarEmpresaServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MostrarEmpresaServlet</servlet-name>
+    <url-pattern>/MostrarEmpresaServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AlteraEmpresaServlet</display-name>
+    <servlet-name>AlteraEmpresaServlet</servlet-name>
+    <servlet-class>servlet.AlteraEmpresaServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AlteraEmpresaServlet</servlet-name>
+    <url-pattern>/AlteraEmpresaServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
