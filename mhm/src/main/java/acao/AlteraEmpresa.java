@@ -1,23 +1,19 @@
-package servlet;
-
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import modelo.Banco;
-import modelo.Empresa;
+package acao;
 
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@WebServlet("/alteraEmpresa")
-public class AlteraEmpresaServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import modelo.Banco;
+import modelo.Empresa;
+
+public class AlteraEmpresa {
+	
+	public void executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { 
 		
 		String nomeEmpresa = request.getParameter("nome");
 		String dataAbertura = request.getParameter("data");
@@ -38,9 +34,7 @@ public class AlteraEmpresaServlet extends HttpServlet {
 		empresa.setNome(nomeEmpresa);
 		empresa.setDataAbertura(dataAbertEmpresa);
 		
-		response.sendRedirect("listaEmpresas");
-		
-		
+		response.sendRedirect("entrada?acao=ListarEmpresas");
 	}
 
 }
