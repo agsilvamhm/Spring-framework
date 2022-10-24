@@ -31,13 +31,13 @@ public class UnicaEntradaServlet extends HttpServlet {
 			nome = acao.executa(request, response);
 		} else if (paramAcao.equals("MostrarEmpresa")) {
 			MostraEmpresa acao = new MostraEmpresa();
-			acao.executa(request, response);			
+			nome = acao.executa(request, response);			
 		}else if (paramAcao.equals("AlteraEmpresa")) {
 			AlteraEmpresa acao = new AlteraEmpresa();
-			acao.executa(request, response);
+			nome = acao.executa(request, response);
 		}else if (paramAcao.equals("CriarEmpresa")) {
 			CriaEmpresa acao = new CriaEmpresa();
-			acao.executa(request, response);
+			nome = acao.executa(request, response);
 		}
 		
 		String[] tipoEndereco = nome.split(":");
