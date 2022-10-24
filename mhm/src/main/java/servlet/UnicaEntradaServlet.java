@@ -6,6 +6,7 @@ import acao.AlteraEmpresa;
 import acao.CriaEmpresa;
 import acao.ListaEmpresa;
 import acao.MostraEmpresa;
+import acao.NovaEmpresaForm;
 import acao.RemoveEmpresa;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -38,11 +39,14 @@ public class UnicaEntradaServlet extends HttpServlet {
 		}else if (paramAcao.equals("CriarEmpresa")) {
 			CriaEmpresa acao = new CriaEmpresa();
 			nome = acao.executa(request, response);
+		}else if (paramAcao.equals("NovaEmpresa")) {
+			NovaEmpresaForm acao = new NovaEmpresaForm();
+			nome = acao.executa(request, response);
 		}
 		
 		String[] tipoEndereco = nome.split(":");
 		if (tipoEndereco[0].equals("forward")) {
-			RequestDispatcher rd = request.getRequestDispatcher(tipoEndereco[1]);
+			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/view/" + tipoEndereco[1]);
 			rd.forward(request, response);
 		} else {
 			response.sendRedirect(tipoEndereco[1]);
