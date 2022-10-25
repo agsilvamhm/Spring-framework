@@ -10,12 +10,12 @@ import jakarta.servlet.http.HttpServletResponse;
 import modelo.Banco;
 import modelo.Empresa;
 
-public class ListaEmpresa {
+public class ListarEmpresas implements Acao{
 	
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Banco banco = new Banco();
 		List<Empresa> lista = banco.getEmpresas();	
 		request.setAttribute("empresas", lista);
-		return "forward:listaEmpresas.jsp";
+		return "forward:listarEmpresa.jsp";
 	}
 }

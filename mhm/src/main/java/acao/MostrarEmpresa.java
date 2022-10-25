@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import modelo.Banco;
 import modelo.Empresa;
 
-public class MostraEmpresa {
+public class MostrarEmpresa implements Acao{
 	
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{ 
 		String paramId = request.getParameter("id");
