@@ -11,6 +11,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+	Usuario Logado: ${usuarioLogado.login} 
+	<br/>
+	<br/>
+
 	<c:if test="${not empty empresa}">
 		<h2>Empresa ${empresa} cadastrada com sucesso!</h2>		
 	</c:if>
