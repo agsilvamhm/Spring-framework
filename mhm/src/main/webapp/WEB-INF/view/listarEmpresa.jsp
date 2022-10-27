@@ -11,6 +11,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<c:import url="logout-parcial.jsp"/> 
+	<br/>
+	<br/>
 	Usuario Logado: ${usuarioLogado.login} 
 	<br/>
 	<br/>
