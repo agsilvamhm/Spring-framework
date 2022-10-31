@@ -44,4 +44,13 @@
     <servlet-name>UnicaEntradaServlet</servlet-name>
     <url-pattern>/UnicaEntradaServlet</url-pattern>
   </servlet-mapping>
+  <filter>
+    <display-name>AutorizacaoFilter</display-name>
+    <filter-name>AutorizacaoFilter</filter-name>
+    <filter-class>servlet.AutorizacaoFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AutorizacaoFilter</filter-name>
+    <url-pattern>/AutorizacaoFilter</url-pattern>
+  </filter-mapping>
 </web-app>
