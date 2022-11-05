@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-//@WebFilter ("/entrada")
+@WebFilter ("/entrada")
 public class AutorizacaoFilter implements Filter {
 
 	@Override

@@ -16,7 +16,7 @@ import acao.Acao;
 
 
 
-//@WebFilter("/entrada")
+@WebFilter("/entrada")
 public class ControladorFilter implements Filter {
 
 	@Override
