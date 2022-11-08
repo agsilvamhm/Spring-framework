@@ -2,6 +2,7 @@ package servlet;
 
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;
+import jakarta.servlet.FilterConfig;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
@@ -18,6 +19,12 @@ import acao.Acao;
 
 @WebFilter("/entrada")
 public class ControladorFilter implements Filter {
+	
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {}
+    
+    @Override
+    public void destroy() {}
 
 	@Override
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain)

@@ -2,6 +2,7 @@ package servlet;
 
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;
+import jakarta.servlet.FilterConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
@@ -15,6 +16,12 @@ import java.io.IOException;
 
 @WebFilter ("/entrada")
 public class AutorizacaoFilter implements Filter {
+	
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {}
+    
+    @Override
+    public void destroy() {}
 
 	@Override
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain)
