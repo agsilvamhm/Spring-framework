@@ -14,9 +14,7 @@ import modelo.Empresa;
 public class ListarEmpresas implements Acao{
 	
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 
-		
 		Banco banco = new Banco();
 		List<Empresa> lista = banco.getEmpresas();	
 		request.setAttribute("empresas", lista);

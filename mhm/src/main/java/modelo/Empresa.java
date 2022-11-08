@@ -3,6 +3,8 @@ package modelo;
 import java.util.Date;
 
 public class Empresa {
+	private static final long serialVersionUID = 1L;
+	
 	private int id;
 	private String nome;
 	private Date dataAbertura = new Date();
