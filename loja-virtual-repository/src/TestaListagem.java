@@ -3,7 +3,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class TestaListaem {
+public class TestaListagem {
 
 	public static void main(String[] args) throws SQLException {
 
@@ -11,7 +11,7 @@ public class TestaListaem {
 		Connection connection = criaConexao.recuperarConexao();
 		
 	     Statement stm = ((Connection) connection).createStatement();
-	     stm.execute("Select id, nome, descricao from public.produto");
+	     stm.execute("Select id, nome, descricao from public.produto order by id");
 	     ResultSet rst = stm.getResultSet();
 
 	     while (rst.next()){
