@@ -8,21 +8,33 @@ public class TestaInsercaoComParametro {
 
 	public static void main(String[] args) throws SQLException {
 		ConnectionFactory factory = new ConnectionFactory();
-		Connection connection = factory.recuperarConexao();
-		String nome = "Flash Driver";
-		String descricao = "Flash Driver de 1 Terabyte";
 		
-		PreparedStatement stm = connection.prepareStatement("INSERT INTO PUBLIC.PRODUTO (nome, descricao) VALUES (?,?)", Statement.RETURN_GENERATED_KEYS);
-		stm.setString(1, nome);
-		stm.setString(2, descricao);
-		
-		stm.execute();
-		ResultSet rst = stm.getGeneratedKeys();
-		while (rst.next()) {
-			Integer id = rst.getInt(1);
-			System.out.println("O id criado foi o :" + id);
-		}
+		try(Connection connection = factory.recuperarConexao()){
+			connection.setAutoCommit(false);
+			
+			try(PreparedStatement stm = connection.prepareStatement("INSERT INTO PUBLIC.PRODUTO (nome, descricao) VALUES (?,?)", Statement.RETURN_GENERATED_KEYS);
+				) {
+				adicionarVariavel("SmartTv", "TV Philips de 65 Polegadas", stm);
+				adicionarVariavel("SmartPhone", "SmartPhone Moto G Plus", stm);
+				connection.commit();
 
-	}
+			}catch(Exception e){
+				e.printStackTrace();
+				System.out.println("Rollback executado!");
+				connection.rollback();
+			}
+		}
+	}	
+		
+		private static void adicionarVariavel(String nome, String descricao, PreparedStatement stm) throws SQLException {
+			stm.setString(1, nome);
+			stm.setString(2, descricao);
+			stm.execute();
+			ResultSet rst = stm.getGeneratedKeys();
+			while (rst.next()) {
+				Integer id = rst.getInt(1);
+				System.out.println("O id criado foi o :" + id);
+			}		
+		}
 
 }
