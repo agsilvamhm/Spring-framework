@@ -5,3 +5,4 @@
 ### Módulo - Java Servlet: Programação Web Java.
 ### Módulo - Java Servlet: Autenticação, autorização e o padrão MVC.
 ### Módulo - Java e JDBC: Trabalhando com um banco de dados.
+### Módulo - Persistência com JPA: Hibernate
