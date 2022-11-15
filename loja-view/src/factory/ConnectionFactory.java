@@ -13,14 +13,19 @@ public class ConnectionFactory {
 
 	public ConnectionFactory() {
 		ComboPooledDataSource comboPooledDataSource = new ComboPooledDataSource();
-		comboPooledDataSource.setJdbcUrl("jdbc:mysql://localhost/loja_virtual?useTimezone=true&serverTimezone=UTC");
-		comboPooledDataSource.setUser("root");
-		comboPooledDataSource.setPassword("root");
+		comboPooledDataSource.setJdbcUrl("jdbc:postgresql://localhost:5432/loja_virtual");
+		comboPooledDataSource.setUser("postgres");
+		comboPooledDataSource.setPassword("Ana926");
 
 		this.dataSource = comboPooledDataSource;
 	}
 
-	public Connection recuperarConexao() throws SQLException {
-		return this.dataSource.getConnection();
+	public Connection recuperarConexao() {
+		try {
+			return this.dataSource.getConnection();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			throw new RuntimeException(e);
+		}
 	}
 }
