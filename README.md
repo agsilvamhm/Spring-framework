@@ -5,4 +5,5 @@
 ### Módulo - Java Servlet: Programação Web Java.
 ### Módulo - Java Servlet: Autenticação, autorização e o padrão MVC.
 ### Módulo - Java e JDBC: Trabalhando com um banco de dados.
+![Alura](https://github.com/agsilvamhm/Spring-framework/blob/main/imagem/Jdbc.PNG)
 ### Módulo - Persistência com JPA: Hibernate
