@@ -7,3 +7,4 @@
 ### Módulo - Java e JDBC: Trabalhando com um banco de dados.
 ![Alura](https://github.com/agsilvamhm/Spring-framework/blob/main/imagem/Jdbc.PNG)
 ### Módulo - Persistência com JPA: Hibernate
+### Módulo - Java e JPA: consultas avançadas, performance e modelos complexos
