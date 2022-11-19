@@ -60,4 +60,8 @@ public class Produto {
 	public void setPreco(BigDecimal preco) {
 		this.preco = preco;
 	}
+	
+	public String toString() {
+		return getNome();
+	}
 }
